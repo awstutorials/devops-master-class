@@ -75,7 +75,7 @@ resource "aws_elb" "elb" {
 resource "aws_instance" "http_servers" {
   #ami                   = "ami-062f7200baf2fa504"
   ami                    = data.aws_ami.aws_linux_2_latest.id
-  key_name               = "default-ec2"
+  key_name               = "ec2-keypair-25042023"
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.http_server_sg.id]
 

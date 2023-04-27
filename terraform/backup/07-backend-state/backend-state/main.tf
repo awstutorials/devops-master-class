@@ -5,7 +5,7 @@ provider "aws" {
 
 //S3 bucket
 resource "aws_s3_bucket" "enterprise_backend_state" {
-    bucket = "dev-applications-backend-state-in28minutes-abc"
+    bucket = "dev-applications-backend-state-in28minutes-260423"
 
     lifecycle {
         prevent_destroy = true
@@ -45,7 +45,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "example" {
 //Locking - Dynamo DB
 
 resource "aws_dynamodb_table" "enterprise_backend_lock" {
-    name = "dev_application_locks"
+    name = "dev_application_locks_26042023"
     billing_mode = "PAY_PER_REQUEST"
 
     hash_key = "LockID"
